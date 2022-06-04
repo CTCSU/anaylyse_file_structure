@@ -1,7 +1,6 @@
 import pandas
 
 class Node:
-    val = ''
     def __init__(self,val=''):
         self.children = []
         self.next = None
@@ -14,7 +13,6 @@ class Node:
         self.next = next
 
     def toArray(self, currentDepth=0, currentHight=0, multilist = None):
-        # read current node first, add an item if the series doesn't exsit one 
         if multilist is None:
             depthAndHight = self.getNodeDepthAndHight()
             multilist = [['' for col in range(depthAndHight[0])] for row in range(depthAndHight[1])]
