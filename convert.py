@@ -3,10 +3,6 @@ from node import Node
 
 last_result = {'line':'','level':0}
 
-def convertStringToFrame(string, rexstrlist):
-    str_split_list = string.splitlines('\n','\r\n','\r')
-    str_split_list = str_split_list.reverse()
-    
 def convertStringListToNode(str_list, rex_list, current_level=0, node=Node()):
     while len(str_list) > 0:
         line = str_list[0]

@@ -48,9 +48,9 @@ class Node:
             next_result = self.next.getNodeDepthAndHight()
         return [max(maxDepth,next_result[0]), totalHight + next_result[1]]
     
-    def toDataFrams(self):
+    def toDataFrams(self, file='result.csv'):
         dataframe = pandas.DataFrame(self.toArray())
-        dataframe.to_csv('result.csv')
+        dataframe.to_csv(file, index=False, encoding='utf-8', header=None)
         
 def test(): 
     node = Node('good')
@@ -62,4 +62,4 @@ def test():
     node.children[0].addChild(Node('child9'))
     node.children[1].addChild(Node("c3"))
     node.children[1].addChild(Node("c4"))
-    node.children[1].children[1].addChild(Node('end2'))
+    tnode.children[1].children[1].addChild(Node('end2'))
